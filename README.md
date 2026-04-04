@@ -31,13 +31,18 @@ How does background noise affect the robustness of different neural network arch
 * **mn40_as** (MobileNetV3 + Knowledge Distillation from PaSST)
 * **HTS-AT** (Hierarchical Transformer with attention mechanisms)
 
+* This project evaluates several state-of-the-art architectures.
+* The original implementations are NOT included in this repository.
+
+
+
 ## 📊 Dataset
 
 * Based on **ESC-50**
 * Reduced to **19 selected classes** (focused on domestic and human-related sounds)
 * Additional **unseen test set** collected for robustness evaluation
 
-> ⚠️ Dataset is not included. Please download ESC-50 from the official source and place it in `data/raw/`.
+> ⚠️ Dataset is not included. Please download ESC-50 from the official source [https://github.com/karolpiczak/ESC-50].
 
 ## ⚙️ Project Structure
 
@@ -79,6 +84,29 @@ The experimental pipeline consists of:
 * Transformer-based models (e.g., HTS-AT) show **higher robustness to noise**
 * Pretraining and attention mechanisms significantly improve performance
 * CNN-based models degrade faster at low SNR levels
+
+## References
+
+## Papers
+
+- Kong et al., "PANNs: Large-Scale Pretrained Audio Neural Networks"
+  https://arxiv.org/...
+
+- Chen et al., "HTS-AT: A Hierarchical Token-Semantic Audio Transformer"
+  https://arxiv.org/...
+
+- PaSST: Patchout Spectrogram Transformer
+  https://arxiv.org/...
+
+- TFNet paper
+  https://arxiv.org/...
+
+## Code Repositories
+
+* https://github.com/Hadryan/TFNet-for-Environmental-Sound-Classification/tree/db5008a48e66e7272263434244c07d3daa253794
+* https://github.com/Hadryan/TFNet-for-Environmental-Sound-Classification/tree/db5008a48e66e7272263434244c07d3daa253794
+* https://github.com/fschmid56/EfficientAT/tree/main
+* https://github.com/RetroCirce/HTS-Audio-Transformer
 
 ## ▶️ Reproducibility
 
