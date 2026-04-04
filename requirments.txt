@@ -1,0 +1,33 @@
+# Core
+
+numpy
+scipy
+pandas
+
+# Deep Learning
+
+torch
+torchaudio
+
+# Audio processing
+
+librosa
+soundfile
+
+# Visualization
+
+matplotlib
+seaborn
+
+# Utilities
+
+tqdm
+pyyaml
+
+# Notebook (optional but recommended)
+
+jupyter
+
+# Machine Learning utils
+
+scikit-learn
