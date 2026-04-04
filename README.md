@@ -89,21 +89,17 @@ The experimental pipeline consists of:
 
 ## Papers
 
-- Kong et al., "PANNs: Large-Scale Pretrained Audio Neural Networks"
-  https://arxiv.org/...
+- Helin Wang, Yuexian Zou, Dading Chong, and Wenwu Wang. Environmental Sound Classification with Parallel Temporal-spectral Attention. 2020.
+  https://arxiv.org/abs/1912.06808
 
-- Chen et al., "HTS-AT: A Hierarchical Token-Semantic Audio Transformer"
-  https://arxiv.org/...
+- Florian Schmid, Khaled Koutini, and Gerhard Widmer. Efficient Large-scale Audio Tagging via Transformer-to-CNN Knowledge Distillation. 2023. 
+  https://arxiv.org/abs/2211.04772
 
-- PaSST: Patchout Spectrogram Transformer
-  https://arxiv.org/...
-
-- TFNet paper
-  https://arxiv.org/...
+- Ke Chen, Xingjian Du, Bilei Zhu, Zejun Ma, Taylor Berg-Kirkpatrick, and Shlomo Dubnov. HTS-AT: A Hierarchical Token-Semantic Audio Transformer for Sound Classification and Detection.2022.
+  https://arxiv.org/abs/2202.00874
 
 ## Code Repositories
 
-* https://github.com/Hadryan/TFNet-for-Environmental-Sound-Classification/tree/db5008a48e66e7272263434244c07d3daa253794
 * https://github.com/Hadryan/TFNet-for-Environmental-Sound-Classification/tree/db5008a48e66e7272263434244c07d3daa253794
 * https://github.com/fschmid56/EfficientAT/tree/main
 * https://github.com/RetroCirce/HTS-Audio-Transformer
