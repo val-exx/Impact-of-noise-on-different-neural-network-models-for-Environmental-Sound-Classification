@@ -58,12 +58,3 @@ This preprocessing step is essential to make the experiments reproducible and co
 
 ---
 
-## Project structure
-
-This module is part of a larger pipeline:
-
-* `src/data/` → dataset preparation
-* `src/noise/` → noise generation and processing
-* `src/evaluation/` → model evaluation under noise
-
-For a general overview of the project, refer to the main `README.md` in the root of the repository.
