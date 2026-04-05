@@ -56,6 +56,18 @@ This ensures that all noise samples are consistent in duration and amplitude.
 
 ---
 
+### `snr_mixer.py`
+
+This script is used to mix a target audio signal with a noise signal at a desired SNR level.
+
+Main operations:
+- adjusting noise length to match the target signal
+- computing signal and noise power in a selected frequency band
+- scaling the noise to obtain the desired SNR
+- generating the final noisy audio signal
+
+This script is a key component of the noise injection process used in the evaluation pipeline.
+
 ## Example usage
 
 ### Generate colored noise
