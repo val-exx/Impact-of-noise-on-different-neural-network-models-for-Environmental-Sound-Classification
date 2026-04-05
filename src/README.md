@@ -85,10 +85,9 @@ Main files:
 This script provides a simple end-to-end example of the project workflow.
 
 Main steps:
-
 1. load an audio file
 2. generate synthetic noise
-3. mix signal and noise
+3. mix signal and noise at a controlled SNR
 4. visualize clean and noisy spectrograms
 5. run a placeholder model prediction
 6. compute a simple confusion matrix
