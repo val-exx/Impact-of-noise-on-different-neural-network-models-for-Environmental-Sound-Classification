@@ -5,6 +5,7 @@ from src.noise.generate_colored_noise import generate_audio_noise
 from src.noise.signal_power import model_frequency_band
 from src.visualization.plot_noisy_spectrogram import plot_spectrogram_comparison
 from src.evaluation.compute_confusion_matrix import compute_confusion_matrix
+from src.noise.snr_mixer import mix_audio_for_model
 
 
 class DummyModel:
@@ -14,29 +15,6 @@ class DummyModel:
     """
     def predict(self, audio):
         return 0
-
-
-def mix_audio_and_noise(audio, noise, snr_db):
-    """
-    Simple placeholder mixing function.
-    If you already have a more precise SNR-based function, use that instead.
-    """
-    if len(noise) < len(audio):
-        repeats = int(np.ceil(len(audio) / len(noise)))
-        noise = np.tile(noise, repeats)
-
-    noise = noise[:len(audio)]
-
-    audio_power = np.mean(audio ** 2)
-    noise_power = np.mean(noise ** 2)
-
-    if noise_power == 0:
-        return audio
-
-    alpha = np.sqrt((audio_power * 10 ** (-snr_db / 10)) / noise_power)
-    noisy_audio = audio + alpha * noise
-    return noisy_audio
-
 
 def run_demo_pipeline(audio_path, model_name='htsat', noise_type='pink', snr_db=5):
     """
@@ -72,7 +50,13 @@ def run_demo_pipeline(audio_path, model_name='htsat', noise_type='pink', snr_db=
         noise_level=1
     )
 
-    noisy_audio = mix_audio_and_noise(audio, noise, snr_db)
+      noisy_audio = mix_audio_for_model(
+        noise_audio=noise,
+        target_audio=audio,
+        sr=sr,
+        model=model_name,
+        SNR=snr_db
+)
 
     plot_spectrogram_comparison(
         audio=audio,
